@@ -14,12 +14,12 @@ try{
     console.log(err)
 }
 
-fs.cp('/home/varmac/Documents/project3/wdpn/theBoilerPlate', dirName, { recursive: true }, (err) => {
+fs.cp('/home/varmac/Documents/001AP/002/wdpn/theBoilerPlate', dirName, { recursive: true }, (err) => {
     if (err) {
       console.error(err);
+      console.log('The following error occured because the path to the boilerplate is faulty, please check the README file for tips on how to fix this.')
     }
   });
   
 console.log(chalk.whiteBright(boxen(`take a deep breath and cd into ${dirName}`, {padding: 2})))
-
 
