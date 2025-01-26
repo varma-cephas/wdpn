@@ -1,6 +1,6 @@
 {
   "name": "wdpn",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "a cli tool for generating boilerPlate for simple htlm css and js ",
   "main": "main.mjs",
   "scripts": {
@@ -23,8 +23,5 @@
   "bugs": {
     "url": "https://github.com/varma-cephas/wdpn/issues"
   },
-  "homepage": "https://github.com/varma-cephas/wdpn#readme",
-  "dependencies": {
-    "boxen": "^7.1.1"
-  }
+  "homepage": "https://github.com/varma-cephas/wdpn#readme"
 }

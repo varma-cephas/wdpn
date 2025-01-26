@@ -111,11 +111,11 @@ try{
     child_process.exec("npm init -y");
     child_process.exec("npm install -D  tailwindcss vite");
 
-    console.log("\nTailwindCSS Cli and Vite Successfully installed!\n");
+    console.log("\nTailwindCSS Cli and Vite is installing. PLEASE, DO NOT CLOSE YOUR TERMINAL WINDOW UNTIL THE PROCESS IS DONE!\n");
     console.log(`\n1.Almost done. Now cd into ${directoryName.toLowerCase()}\n`);
     console.log(`\n2. Please open a seperate tab in your terminal, make sure that you are in the same project directory and run the mentioned below to generate the output.css file and start using tailwind \n npx @tailwindcss/cli -i ./css/input.css -o ./css/output.css --watch \n`);
 
-    console.log("Please wait as the packages is install. DO NOT CLOSE YOUR TERMINAL!");
+    console.log("Please wait as the packages is install.");
     console.log("\nRun npm run dev to start the vite server\n");
 }catch(error){
     console.log("\nThe directory mentioned for you project name already exist, please try another one.\n")
