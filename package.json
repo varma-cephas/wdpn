@@ -1,6 +1,6 @@
 {
   "name": "wdpn",
-  "version": "1.1.1",
+  "version": "1.2.1",
   "description": "a cli tool for generating boilerPlate for simple htlm css and js ",
   "main": "main.mjs",
   "scripts": {
