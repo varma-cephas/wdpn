@@ -56,10 +56,7 @@ const htmlBoilerPlate = `<!DOCTYPE html>
 </html>
 `;
 
-const inputCSSTailwindBoilerPlate=`@tailwind base;
-@tailwind components;
-@tailwind utilities;
-`;
+const inputCSSTailwindBoilerPlate=`@import "tailwindcss"`;
 
 const tailwindConfigBoilerPlate=`/** @type {import('tailwindcss').Config} */
 module.exports = {
