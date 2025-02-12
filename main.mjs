@@ -24,7 +24,7 @@ const newJSBoilerPlateFilePath= getOs==="win32"?`${currentWorkingPath}\\${direct
 const newFaviconBoilerPlateFilePath= getOs==="win32"?`${currentWorkingPath}\\${directoryName.toLowerCase()}\\assets\\favicon.svg`:`${currentWorkingPath}/${directoryName}/assets/favicon.svg`;
 const newtailwindConfigBoilerPlateFilePath= getOs==="win32"?`${currentWorkingPath}\\${directoryName.toLowerCase()}\\tailwind.config.js`:`${currentWorkingPath}/${directoryName}/tailwind.config.js`;
 const newJSONConfigBoilerPlateFilePath= getOs==="win32"?`${currentWorkingPath}\\${directoryName.toLowerCase()}\\package.json`:`${currentWorkingPath}/${directoryName}/package.json`;
-const newGitIgnoreBoilerPlateFilePath= getOs==="win32"?`${currentWorkingPath}\\${directoryName.toLowerCase()}\\.gitIgnore`:`${currentWorkingPath}/${directoryName}/.gitIgnore`;
+const newGitIgnoreBoilerPlateFilePath= getOs==="win32"?`${currentWorkingPath}\\${directoryName.toLowerCase()}\\.gitIgnore`:`${currentWorkingPath}/${directoryName}/.gitignore`;
 
 
 const htmlBoilerPlate = `<!DOCTYPE html>
@@ -109,7 +109,7 @@ try{
     child_process.exec("npm install -D  tailwindcss vite");
 
     console.log("\nTailwindCSS Cli and Vite is installing. PLEASE, DO NOT CLOSE YOUR TERMINAL WINDOW UNTIL THE PROCESS IS DONE!\n");
-    console.log(`\n1.Almost done. Now cd into ${directoryName.toLowerCase()}\n`);
+    console.log(`\n1.When done. please cd into ${directoryName.toLowerCase()}\n`);
     console.log(`\n2. Please open a seperate tab in your terminal, make sure that you are in the same project directory and run the mentioned below to generate the output.css file and start using tailwind \n npx @tailwindcss/cli -i ./css/input.css -o ./css/output.css --watch \n`);
 
     console.log("Please wait as the packages is install.");
