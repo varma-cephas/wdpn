@@ -1,6 +1,6 @@
 {
   "name": "wdpn",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "a cli tool for generating boilerPlate for simple htlm css and js ",
   "main": "main.mjs",
   "scripts": {
@@ -16,7 +16,7 @@
     "cli"
   ],
   "bin": {
-    "wdpn": "./main.mjs"
+    "wdpn": "main.mjs"
   },
   "author": "varmac",
   "license": "ISC",
