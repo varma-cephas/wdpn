@@ -17,6 +17,10 @@ To install via npm:
 - install wdpn package with command `npm install -g wdpn` , which will install the package globally.
 - after installation, close and reopen your terminal, and type the command `wdpn` to ensure that the package was installed correctly.
 
+### Update 
+To update `wdpn` you'll have to uninstall it globally with `npm uninstall -g wdpn` and proceed to install it globally with `npm install -g wdpn` to get the latest version. 
+I'm current looking for a better way to implement dates, please make suggestions or open issues if you're aware of any!
+
 ### How to use
 There are already instructions that is printed to your terminal when you're running the command, but here's a summary of them:
 
