@@ -125,15 +125,15 @@ switch(cliArg){
   case "--react-ts":
     try{
       child_process.exec(`npm create vite@latest ${directoryName} -- --template react-ts`).addListener("close",()=>{
-        process.chdir(`${currentWorkingPath}/${directoryName}`);
+        process.chdir(getOs!=="win32"?`${currentWorkingPath}/${directoryName}`: `${currentWorkingPath}\\${directoryName}`);
         currentWorkingPath = process.cwd();
-        child_process.exec(`rm -r index.html vite.config.ts`).addListener("close", ()=>{
+        child_process.exec(getOs!=="win32"?`rm -r index.html vite.config.ts`:`del index.html vite.config.ts`).addListener("close", ()=>{
           const reactHTMLTemplate = `<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>${directoryName.charAt(0).toUpperCase()}</title>
+    <title>${directoryName.charAt(0).toUpperCase()}${directoryName.split("").splice(1).join("")}</title>
   </head>
   <body>
     <div id="root"></div>
@@ -152,16 +152,16 @@ export default defineConfig({
 })       
        `
 
-        fs.writeFileSync(`${currentWorkingPath}/${"index.html"}`, reactHTMLTemplate);
-        fs.writeFileSync(`${currentWorkingPath}/${"vite.config.ts"}`, viteConfigBoilerplate);
+        fs.writeFileSync(getOs!=="win32"?`${currentWorkingPath}/${"index.html"}`:`${currentWorkingPath}\\${"index.html"}`, reactHTMLTemplate);
+        fs.writeFileSync(getOs!=="win32"?`${currentWorkingPath}/${"vite.config.ts"}`:`${currentWorkingPath}\\${"vite.config.ts"}`, viteConfigBoilerplate);
         })
 
 
-        child_process.exec("rm -r src/App.css src/assets/react.svg src/index.css src/App.tsx").addListener("close",()=>{
+        child_process.exec(getOs!=="win32"?"rm -r src/App.css src/assets/react.svg src/index.css src/App.tsx":"del -r src\\App.css src\\assets\\react.svg src\\index.css src\\App.tsx").addListener("close",()=>{
         const defaultAppComponentTemplate = `function App() {
   return (
     <>
-      <h1>hello world</h1>
+      <h1 className="bg-yellow-400">hello world</h1>
     </>
   )
 }
@@ -169,11 +169,11 @@ export default defineConfig({
 export default App
         `
         const tailwindCSSSetup = `@import "tailwindcss";`
-        fs.writeFileSync(`${currentWorkingPath}/src/${"App.tsx"}`, defaultAppComponentTemplate);
-        fs.writeFileSync(`${currentWorkingPath}/src/${"index.css"}`, tailwindCSSSetup);
+        fs.writeFileSync(getOs!=="win32"?`${currentWorkingPath}/src/${"App.tsx"}`:`${currentWorkingPath}\\src\\${"App.tsx"}`, defaultAppComponentTemplate);
+        fs.writeFileSync(getOs!=="win32"?`${currentWorkingPath}/src/${"index.css"}`:`${currentWorkingPath}\\src\\${"index.css"}`, tailwindCSSSetup);
 
         });
-        child_process.exec("mkdir src/components");
+        child_process.exec(getOs!=="win32"?"mkdir src/components":"mkdir src\\components");
         console.log("Now installing packages")
         child_process.exec("npm install && npm install tailwindcss @tailwindcss/vite && code .").addListener("close",()=>{
           console.log(`Great! Now cd into ${directoryName} and npm run dev !`)
