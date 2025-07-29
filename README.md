@@ -27,6 +27,9 @@ There are already instructions that is printed to your terminal when you're runn
     - please keep this tab open as TailwindCSS is going to need to be rebuilt as you write more classes. there's no need to worry about rebuilding manually because it is already in the command that we copy and pasted, the rebuild will happen automatically, whenever we make a change.
 - if you have VS Code installed, you can open the project with `code .` and run `npm run dev` to start the Vite server.
 
+### React Tailwind 
+Please ensure you have installed the npm package or cloned the script locally before running this!
+To quickly create a react and tailwind project, use `wdpn --react-ts [project_name]`
  
 ## Feedback and Questions
 - if there are any feedback, questions, or tips for improvements, I will be most delighted to hear them. Please open an issue or send me an email at varmac231@gmail.com. Thank you.
