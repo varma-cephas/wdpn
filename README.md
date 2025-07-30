@@ -37,7 +37,7 @@ To quickly create a react and tailwind project, use `wdpn --react-ts [project_na
 
 ### Important for windows user!
 The code is open, please take your time and go through it if there are any doubts. 
-There might be some persmission issues in terms of running the npm package, please ensure you run `wdpn` as in powershell as admin to solve any freezes that might happen while tyring to run the command.
+There might be some persmission issues in terms of running the npm package, please ensure you run `wdpn` in powershell as admin to solve any freezes that might happen while tyring to run the command.
  
 ## Feedback and Questions
 - if there are any feedback, questions, or tips for improvements, I will be most delighted to hear them. Please open an issue or send me an email at varmac231@gmail.com. Thank you.
